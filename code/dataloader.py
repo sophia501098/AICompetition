@@ -15,7 +15,7 @@ class myDataSet(data.Dataset):
         self.datalist=pd.read_csv(self.datalistpath)
 
     def __len__(self):
-        return len(self.Data)
+        return self.datalist.shape[0]
 
     #得到数据内容和标签
     def __getitem__(self, index):
